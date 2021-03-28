@@ -1,8 +1,11 @@
 # Copyright (C) 2021, Pedro Reis dos Santos
 .SUFFIXES: .in .out .diff
 MAKEFLAGS += --no-print-directory # No entering and leaving messages
-OK="\e[1;32mtest $< PASSED\e[0m"
-KO="\e[1;31mtest $< FAILED\e[0m"
+GREEN=$(shell tput setaf 2)
+RED=$(shell tput setaf 1)
+RESET=$(shell tput op)
+OK="$(GREEN)test $< PASSED$(RESET)"
+KO="$(RED)test $< FAILED$(RESET)"
 EXE=../proj1
 
 all:: clean # run regression tests
