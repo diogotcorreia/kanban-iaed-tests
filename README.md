@@ -2,6 +2,10 @@
 
 This repository contains tests for the 1st project (Kanban) for IAED 2020/2021.
 
+## FAQ
+
+FAQs about the Kanban project itself (not these tests) can be found on the [`FAQ.md`](./FAQ.md) file.
+
 ## Using this in your own project
 
 To use this to test your own project, here are the requisites you must meet:
