@@ -12,8 +12,10 @@ To use this to test your own project, here are the requisites you must meet:
 
 - Be running a Unix system (Linux or MacOS). This should also work on a VM and WSL.
 - Have all your `.c` and `.h` in one folder.
-- Have `git`, `diff`, `gcc` and `make` installed on your system (probably already installed).
-- Have a Makefile in your project directory that compiles your project to a single executable.
+- Have `git`, `diff`, `gcc` and `make`(\*) installed on your system (probably already installed).
+- Have a Makefile in your project directory that compiles your project to a single executable(\*).
+
+*(\*) = You only need this if you're using method #2.*
 
 ### Clone this repository
 
@@ -25,7 +27,17 @@ You can clone this anywhere in your system.
 git clone https://github.com/diogotcorreia/kanban-iaed-tests.git
 ```
 
-### Configure
+### Method 1: Just Do It! by Raf (easier but less efficient)
+
+1. Go to the folder you cloned this repository into (`cd kanban-iaed-tests`)
+2. Run `./justdoit.sh PATH`, where PATH is where your `*.c` files are (for example, `../Proj1IAED/src`). Do **not** include a trailing slash.
+3. That's it!
+
+The script will create `.myout` and `.diff` files in the `tests/` directory so you can analyze them if you need to. To get rid of them, you can run `./justdoit.sh clean`.
+
+### Method 2: Make files (more complex to setup but more efficient)
+
+#### Configure
 
 Then, you have to create the configuration file.
 To do that, copy the `config.default` file to `config` and edit it accordingly.
@@ -36,7 +48,7 @@ cp config.default config # create the configuration file from the default
 nano config # edit the file as you'd like. You can use another editor, like 'vim', 'emacs', etc.
 ```
 
-### Run the tests
+#### Run the tests
 
 To run the tests, just run `make` in this repository's folder:
 
@@ -46,7 +58,7 @@ make
 
 It will create various `.diff` files in the `tests` directory and tell you which tests fail and which tests pass.
 
-### Update the tests
+### Whichever Method you Chose: Update the tests
 
 The tests will be updated frequently on this repository.
 To make sure you're running an up-to-date copy, just pull from the repository using:
