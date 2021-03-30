@@ -52,7 +52,14 @@ do
 		status="${RED}FAILED${NC}"
 	fi
 
-	echo -e "> Test $tid - $status"
+	padding=""
+	len="${#tid}"
+	while [ $len -lt 5 ]; do
+		padding=" $padding"
+		((len++))
+	done
+
+	echo -e "> Test $tid$padding - $status"
 done
 
 rm -f $exename
@@ -60,7 +67,7 @@ rm -f $exename
 echo ----------
 
 if [ $passed -eq $total ]; then
-	echo -e "Result: ${GREEN}ALL CLEAR! :)${NC}"
+	echo -e "Result: ${GREEN}ALL CLEAR! :D${NC}"
 else
 	echo -e "Result: ${RED}Some tests failed :(${NC}"
 fi
