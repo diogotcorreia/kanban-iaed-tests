@@ -76,8 +76,8 @@ echo
 
 if !(which lizard >/dev/null); then
 	echo "Pro Tip: Install lizard so I can check for obese functions"
-elif lizard $1 -L 25 -w; then
+elif lizard $1 -Tnloc=26 -w; then
 	echo -e "Bonus: ${GREEN}Nice!${NC} None of your functions are too big!"
 else
-	echo -e "Bonus: ${RED}Oh no!${NC} The functions above have been diagnosed with clinical obesity! Try to get them under 25 lines."
+	echo -e "Bonus: ${RED}Oh no!${NC} The functions above have been diagnosed with clinical obesity! Try to get them to use at most 25 lines of code (NLOC)."
 fi
