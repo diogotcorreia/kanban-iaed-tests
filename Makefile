@@ -9,4 +9,4 @@ all:: proj1
 	$(MAKE) $(MFLAGS) -C tests
 proj1: $(PROJECT_PATH)*.c $(PROJECT_PATH)*.h
 clean::
-	rm -f proj1 tests/*.diff
+	rm -f proj1 tests/*.diff tests/*.myout
