@@ -12,3 +12,5 @@ Below is a list of each test and it's main purpose, along with who created it.
 | ct006 | Negative/zero duration in `t`. Order of error messages                                   | @diogotcorreia |
 | ct007 | `l` command with 10000 tasks as arguments, in random order                               | @diogotcorreia |
 | ct008 | Various errors and edge cases                                                            | @Pesteves2002  |
+| ct009 | Tests spaces between numbers in `l`                                                      | @randomicecube |
+| ct010 | Bounds of the `no such task` message in the `m` command.                                 | Pedro Ribeiro  |
