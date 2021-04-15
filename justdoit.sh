@@ -43,7 +43,7 @@ do
 	((total++))
 	tid=$(basename -s .in $tid)
 	./$exename < tests/$tid.in > tests/$tid.myout
-	diff -y tests/$tid.myout tests/$tid.out > tests/$tid.diff # original didn't use -u but ok
+	diff -y --suppress-common-lines tests/$tid.myout tests/$tid.out > tests/$tid.diff # original didn't use -u but ok
 	
 	if [ "$(wc -l < tests/$tid.diff)" -eq 0 ]; then
 		status="${GREEN}PASSED${NC}"
